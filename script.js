@@ -230,11 +230,11 @@ function showImage(cardName) {
       var playground = document.getElementById("dealer_playground");
       if (dealerCards.length == 1) {
         coverImage = document.createElement("img");
-        coverImage.src = "/Playing Cards/cover.png";
+        coverImage.src = "/PlayingCards/cover.png";
         coverImage.id = "cover-card";
         playground.appendChild(coverImage);
         cardImage = document.createElement("img");
-        cardImage.src = "/Playing Cards/" + cardName + ".png";
+        cardImage.src = "/PlayingCards/" + cardName + ".png";
         cardImage.id = "first-card";
         playground.appendChild(cardImage);
         document.getElementById("cover-card").style.display = "inline";
@@ -243,7 +243,7 @@ function showImage(cardName) {
         // create a new img tag
         var cardImage = document.createElement("img");
         // set image src
-        cardImage.src = "/Playing Cards/" + cardName + ".png";
+        cardImage.src = "/PlayingCards/" + cardName + ".png";
         // append it to div tag
         playground.appendChild(cardImage);
       }
@@ -254,7 +254,7 @@ function showImage(cardName) {
       // create a new img tag
       var cardImage = document.createElement("img");
       // set image src
-      cardImage.src = "/Playing Cards/" + cardName + ".png";
+      cardImage.src = "/PlayingCards/" + cardName + ".png";
       // append it to div tag
       playground.appendChild(cardImage);
     default:
