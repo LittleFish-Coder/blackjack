@@ -1,0 +1,101 @@
+<!--
+E14076423 許茗洋 第3次作業 5/2
+E14076423 Ming-Yang Hsu The Third Homework 5/2
+-->
+
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Blackjack</h1>
+    </header>
+
+    <div class="container">
+      <div class="left-window">
+        <!-- Dealer Section -->
+        <p>Dealer Playground</p>
+        <div id="dealer_playground" class="playground"></div>
+        <!-- Button -->
+        <hr />
+        <div class="button_zone">
+          <button onclick="newGame()">New Game</button>
+          <button onclick="hit()">Hit</button>
+          <button onclick="stand()">Stand</button>
+          <button onclick="surrender()">Surrender</button>
+        </div>
+        <hr />
+        <!-- Player Section -->
+        <p>Player Playground</p>
+        <p id="point"></p>
+        <p id="record"></p>
+        <div id="player_playground" class="playground"></div>
+      </div>
+      <div class="right-window">
+        <!-- Dealer Table of recording score -->
+        <div class="table-wrapper">
+          <table id="table">
+            <thead>
+              <tr>
+                <th colspan="3">Dealer Table</th>
+              </tr>
+              <tr>
+                <th>Round</th>
+                <th>Cards</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody id="dealer-table-body"></tbody>
+          </table>
+        </div>
+        <!-- bulletin -->
+        <h2 id="bulletin">Bulletin</h2>
+        <!-- Player Table of recording score -->
+        <div class="table-wrapper">
+          <table id="table">
+            <thead>
+              <tr>
+                <th colspan="3">Player Table</th>
+              </tr>
+              <tr>
+                <th>Round</th>
+                <th>Cards</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody id="player-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-window">
+      <h2 id="bet">Your bet amount:</h2>
+      <div id="cheat">
+        <h2>遊戲規則 (Cheat Sheet)</h2>
+        <h3>流程</h3>
+        <p>1.莊家發給自己一張牌</p>
+        <p>2.向各玩家分別派發一張牌</p>
+        <p>2.向各玩家派第二張牌</p>
+        <p>3.玩家可繼續要牌</p>
+        <p>4.莊家逐位詢問玩家是否加牌</p>
+        <p>4.待玩家停止要牌後，莊家如不足17點便需加牌直至超過或等於17點</p>
+        <p>5.對未有爆牌的玩家，比點數大小，大者勝，可得賠金</p>
+        <h3>點數計算</h3>
+        <p>A可作一點或十一點，2-10作該牌之點數，J、Q、K作10點</p>
+        <h3>爆牌(超過21點)</h3>
+        <p>
+          閒家要牌後，其手上的點數超過21點，則無法與莊家比牌，直接判定為輸牌。
+          反之若其手上擁有的牌的總點數不超過21點，該閒家可決定是否繼續要牌。
+          當最後一位閒家決定不再要牌後，莊家就必須揭開自己所有手上的牌，若總點數大於17點，就必須停牌；如果莊家爆牌，便向沒有爆牌的閒家，賠出該閒家所投注的同等的注碼。
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

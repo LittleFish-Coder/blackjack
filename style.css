@@ -1,0 +1,81 @@
+/* 
+E14076423 許茗洋 第3次作業 5/2
+E14076423 Ming-Yang Hsu The Third Homework 5/2
+*/
+
+body {
+  background-color: seashell;
+}
+
+.container {
+  display: flex;
+}
+
+.left-window {
+  float: left;
+  flex: 2;
+}
+
+.right-window {
+  float: right;
+  flex: 1;
+}
+
+#cheat {
+  background-color: burlywood;
+  font-size: larger;
+  /* width: 50%; */
+}
+
+h3 {
+  color: darkblue;
+}
+
+.table-wrapper {
+  height: 250px; /* set the initial height */
+  overflow-y: scroll;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+.button_zone {
+  text-align: center;
+}
+
+.button_zone button {
+  width: 100px;
+  height: 50px;
+  background-color: purple;
+  border-radius: 15%;
+}
+
+.playground {
+  background-color: rgb(71, 198, 151);
+  min-height: 200px;
+  overflow: auto;
+}
+
+.playground img {
+  position: relative;
+  width: 150px;
+  height: 200px;
+}
